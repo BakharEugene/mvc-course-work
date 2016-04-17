@@ -1,0 +1,8 @@
+﻿@model mvc_course_work.Models.ViewModel.TakeAllInfo
+@{
+
+}
+@foreach (var b in Model.Drivers)
+{
+    <p><a href="@b.Id">@b.name @b.familyName</a></p>
+}

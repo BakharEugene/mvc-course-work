@@ -1,0 +1,48 @@
+﻿@model mvc_course_work.Models.Entities.Driver
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/driver.css" />
+    <title;></title;>
+</head>
+<body>
+    <div class="information">
+        <p>
+            <img src="@Model.picture" class="photo" align="left">
+            sosi asdfasdfas fasd fasdf asdf asd fasd fasdf
+            asdf asd fasd fasd fasdf asdf asdf asdf asdf as
+            asdf asdfa sdf wefqwefqwe fqwefqw
+            e fqwef qwefqwerqwe tqwet wef zxv zxcv zxcv
+            sw qreqwr qwerqw efd
+        </p>
+
+        <div class="biography">
+            <table cellspacing="5" cellpadding="10">
+                <tr>
+                    <td>Family name</td>
+                    <td>@Model.familyName</td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>@Model.name</td>
+                </tr>
+                <tr>
+                    <td>Car</td>
+                    <td>@Model.car</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>@Model.date</td>
+                </tr>
+                <tr>
+                    <td>Team</td>
+                    <td>@Model.Team.Name</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+</html>

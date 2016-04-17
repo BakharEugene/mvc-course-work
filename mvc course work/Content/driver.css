@@ -1,0 +1,120 @@
+﻿body {
+    background: url("../Images/MainWallpapper.jpg");
+    background-size: auto;
+}
+
+
+.photo {
+    margin: 7px 7px;
+    height: 500px;
+    width: 500px;
+    float: left;
+}
+
+
+.biography {
+    float: left;
+    font-size: 20px;
+    
+}
+
+.biography table{
+   
+}
+.information {
+    font-size: 20px;
+}
+
+
+.drivers .blck {
+    clear: both;
+    display: inline-block;
+    width: 30%;
+    height: 400px;
+    vertical-align: top;
+    text-align: center;
+}
+
+
+.drivers {
+    clear: both;
+    margin-left: 1px;
+    text-align: center;
+    width: 100%;
+}
+
+    .drivers ul {
+        width: 100%;
+    }
+
+.blck img {
+    height: 70%;
+    width: 100%;
+}
+
+.blck {
+    margin-top: 20px;
+}
+
+    .blck a {
+        font-size: large;
+        font-family: fantasy;
+        color: #000;
+    }
+
+    .blck .text {
+        font-size: large;
+        font-family: fantasy;
+        color: #000;
+    }
+
+        .blck .text a {
+            font-size: large;
+            font-family: fantasy;
+            color: #000;
+        }
+
+    .blck:hover .text a {
+        transition-property: margin-top,color;
+        margin-top: 0px;
+        color: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .blck:hover .text {
+    }
+
+    .blck .text {
+    }
+
+    .blck:hover .text a {
+        transition-property: color;
+        margin-top: 0px;
+        color: #fff;
+        transition-duration: 0.9s;
+    }
+
+    .blck:hover .text {
+        transition-property: background;
+        transition-duration: 0.9s;
+        background: #000;
+    }
+
+        .blck:hover .text p {
+            transition-property: margin-top,color;
+            margin-top: 0px;
+            color: #fff;
+            transition-duration: 0.9s;
+        }
+
+    .blck .text .id {
+        opacity: 0.0;
+        color: #fff;
+    }
+
+    .blck:hover .text .id {
+        transition-property: opacity,color;
+        opacity: 1;
+        color: #fff;
+        transition-duration: 0.9s;
+    }

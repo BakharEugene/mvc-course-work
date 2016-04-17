@@ -1,0 +1,38 @@
+﻿@model  mvc_course_work.Models.ViewModel.TakeAllDrivers
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/driver.css" />
+    <title></title>
+</head>
+<body>
+    <h3>
+        Reigning champions Mercedes retain the same driver line-up for 2016,
+        as do most of the other top teams. That doesn’t mean there aren’t big changes, though.
+        Romain Grosjean moves to the all-new Haas squad - the first American-led team to join the
+        grid in three decades - and is partnered by F1 returnee Esteban Gutierrez.
+        At Renault (the French car maker having taken over Lotus), Great Britain’s Jolyon Palmer steps up from
+        his reserve role to partner former McLaren racer Kevin Magnussen. And at Manor, two new names make their debut -
+        Mercedes protege Pascal Wehrlein and Indonesia's first F1 driver, Rio Haryanto.
+    </h3>
+    <div class="drivers">
+        <ul>
+            @foreach (var b in Model.Drivers)
+            {
+                <li class="blck">
+
+
+                    <div class="text">
+                        <a href="@Url.Action("Index", "Driver", new {b.Id})">
+                        <img src="@b.picture" />@b.name @b.familyName</a>
+                        <p>@b.Team.Name</p>
+                        <p class="id">@b.date</p>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</body>
+</html>

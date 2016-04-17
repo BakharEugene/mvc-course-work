@@ -1,0 +1,27 @@
+﻿@model  mvc_course_work.Models.ViewModel.TakeAllRaces
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link rel="stylesheet" href="~/Content/races.css" />
+</head>
+<body>
+    <div class="races">
+        <ul>
+            @foreach (var b in Model.Races)
+            {
+                <li class="blck">
+
+                    <div class="text">
+                        <a href="@Url.Action("Index", "Driver", new {b.Id})">
+                            <img src="@b.photo" />@b.Name
+                        </a>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</body>
+</html>
