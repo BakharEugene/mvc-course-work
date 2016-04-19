@@ -5,7 +5,9 @@
 
 
 .photo {
-    margin: 7px 7px;
+    margin-right:20px;
+    margin-left:10px;
+    margin-bottom:10px;
     height: 500px;
     width: 500px;
     float: left;
@@ -14,12 +16,13 @@
 
 .biography {
     float: left;
-    font-size: 20px;
-    
+    font-size: 30px;
+    font-family:'Monotype Corsiva';
 }
 
-.biography table{
+.biography table td{
    
+
 }
 .information {
     font-size: 20px;
@@ -33,6 +36,7 @@
     height: 400px;
     vertical-align: top;
     text-align: center;
+    
 }
 
 

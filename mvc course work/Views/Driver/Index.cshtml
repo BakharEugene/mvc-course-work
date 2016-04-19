@@ -9,17 +9,8 @@
 </head>
 <body>
     <div class="information">
-        <p>
-            <img src="@Model.picture" class="photo" align="left">
-            sosi asdfasdfas fasd fasdf asdf asd fasd fasdf
-            asdf asd fasd fasd fasdf asdf asdf asdf asdf as
-            asdf asdfa sdf wefqwefqwe fqwefqw
-            e fqwef qwefqwerqwe tqwet wef zxv zxcv zxcv
-            sw qreqwr qwerqw efd
-        </p>
-
         <div class="biography">
-            <table cellspacing="5" cellpadding="10">
+            <table cellspacing="5" cellpadding="10" >
                 <tr>
                     <td>Family name</td>
                     <td>@Model.familyName</td>
@@ -37,11 +28,33 @@
                     <td>@Model.date</td>
                 </tr>
                 <tr>
+                    <td>Place of birth</td>
+                    <td>@Model.placeOfBirth</td>
+                </tr>
+                <tr>
+                    <td>Country</td>
+                    <td>@Model.country</td>
+                </tr>
+                <tr>
                     <td>Team</td>
                     <td>@Model.Team.Name</td>
                 </tr>
+                <tr>
+                    <td>Points</td>
+                    <td>@Model.points</td>
+                </tr>
             </table>
         </div>
+        <p>
+
+            <img src="@Model.picture" class="photo" align="left">
+            @Model.shortBiography
+
+        </p>
+       <p> <a > see all biography</a></p>
+        <iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/jbDLDCkRnYkk" frameborder="0"></iframe>
+        <iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/jbDLDCkRnYkk" frameborder="0"></iframe>
+        <iframe class="youtube-player" type="text/html" width="640" height="385" src="http://www.youtube.com/embed/jbDLDCkRnYkk" frameborder="0"></iframe>
     </div>
 
 </body>
