@@ -3,46 +3,52 @@
     background-size: auto;
 }
 
-
-.photo {
-    margin-right:20px;
-    margin-left:10px;
-    margin-bottom:10px;
-    height: 500px;
-    width: 500px;
+.biography{
+    margin-top:10px;
+}
+.biography img.photo {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    height:100%;
+    width: 25%;
     float: left;
 }
 
 
-.biography {
-    float: left;
+.biography table {
     font-size: 30px;
-    font-family:'Monotype Corsiva';
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
-
 .biography table td{
-   
-
+    width:300px;
 }
 .information {
     font-size: 20px;
 }
 
+.p {
+    position: relative;
+}
+
+.biography {
+    height: auto;
+}
 
 .drivers .blck {
     clear: both;
     display: inline-block;
-    width: 30%;
-    height: 400px;
+    width: 24%;
+    height: auto;
     vertical-align: top;
     text-align: center;
-    
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
 .drivers {
     clear: both;
-    margin-left: 1px;
     text-align: center;
     width: 100%;
 }

@@ -8,7 +8,7 @@
     <title></title>
 </head>
 <body>
-    <h3>
+    <h3 class="textblock">
         Reigning champions Mercedes retain the same driver line-up for 2016,
         as do most of the other top teams. That doesn’t mean there aren’t big changes, though.
         Romain Grosjean moves to the all-new Haas squad - the first American-led team to join the
@@ -22,13 +22,11 @@
             @foreach (var b in Model.Drivers)
             {
                 <li class="blck">
-
-
                     <div class="text">
                         <a href="@Url.Action("Index", "Driver", new {b.Id})">
                         <img src="@b.picture" />@b.name @b.familyName</a>
                         <p>@b.Team.Name</p>
-                        <p class="id">@b.date</p>
+                        <p class="id">@b.number</p>
                     </div>
                 </li>
             }

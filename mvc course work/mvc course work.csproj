@@ -162,36 +162,27 @@
     <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PodiumController.cs" />
     <Compile Include="Controllers\RaceController.cs" />
     <Compile Include="Controllers\TeamController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="interfaces\IRepository.cs" />
-    <Compile Include="Migrations\201604160908558_Initial.cs" />
-    <Compile Include="Migrations\201604160908558_Initial.Designer.cs">
-      <DependentUpon>201604160908558_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604170809166_Initial1.cs" />
-    <Compile Include="Migrations\201604170809166_Initial1.Designer.cs">
-      <DependentUpon>201604170809166_Initial1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604171620037_Initial2.cs" />
-    <Compile Include="Migrations\201604171620037_Initial2.Designer.cs">
-      <DependentUpon>201604171620037_Initial2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604171622278_Initial3.cs" />
-    <Compile Include="Migrations\201604171622278_Initial3.Designer.cs">
-      <DependentUpon>201604171622278_Initial3.cs</DependentUpon>
+    <Compile Include="Migrations\201604250746069_Initial.cs" />
+    <Compile Include="Migrations\201604250746069_Initial.Designer.cs">
+      <DependentUpon>201604250746069_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DAL\DriverRepository.cs" />
+    <Compile Include="Models\DAL\PodiumRepository.cs" />
     <Compile Include="Models\DAL\RaceRepository.cs" />
     <Compile Include="Models\DAL\TeamRepository.cs" />
     <Compile Include="Models\DAL\UnitOfWork.cs" />
     <Compile Include="Models\Entities\BaseEntityWithId.cs" />
     <Compile Include="Models\Entities\Driver.cs" />
+    <Compile Include="Models\Entities\Podium.cs" />
     <Compile Include="Models\Entities\Race.cs" />
     <Compile Include="Models\Entities\Team.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -206,6 +197,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\countdown.css" />
     <Content Include="Content\driver.css" />
     <Content Include="Content\menu.css" />
     <Content Include="Content\races.css" />
@@ -247,7 +239,6 @@
     <None Include="Scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="Scripts\jquery-2.2.3.js" />
     <Content Include="Scripts\jquery-2.2.3.min.js" />
-    <Content Include="Scripts\jquery.main-page.js" />
     <Content Include="Scripts\jquery.menu.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
@@ -307,17 +298,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604160908558_Initial.resx">
-      <DependentUpon>201604160908558_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604170809166_Initial1.resx">
-      <DependentUpon>201604170809166_Initial1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604171620037_Initial2.resx">
-      <DependentUpon>201604171620037_Initial2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604171622278_Initial3.resx">
-      <DependentUpon>201604171622278_Initial3.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201604250746069_Initial.resx">
+      <DependentUpon>201604250746069_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

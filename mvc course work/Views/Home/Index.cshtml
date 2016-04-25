@@ -1,8 +1,20 @@
-﻿@model mvc_course_work.Models.ViewModel.TakeAllInfo
-@{
-
-}
-@foreach (var b in Model.Drivers)
-{
-    <p><a href="@b.Id">@b.name @b.familyName</a></p>
-}
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/driver.css" />
+    <script type="text/javascript" src="~/Scripts/jquery-2.2.3.intellisense.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-2.2.3.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery.main-page.js"></script>
+    <link rel="stylesheet" href="~/Content/countdown.css" />
+    <title;></title;>
+</head>
+<body>
+     @{
+         mvc_course_work.Models.DAL.UnitOfWork unit = new mvc_course_work.Models.DAL.UnitOfWork();
+         var races=unit.Races.GetAll();
+     }
+    <div id="countdown"></div>
+</body>
+</html>

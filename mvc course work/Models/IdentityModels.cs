@@ -27,6 +27,7 @@ namespace mvc_course_work.Models
         public DbSet<Driver> Drivers { get; set; }
         public DbSet<Race> Races { get; set; }
         public DbSet<Team> Teams { get; set; }
+        public DbSet<Podium> Podiums { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

@@ -58,7 +58,8 @@ html {
 }
 
 body {
-    margin: 0;
+    margin-left:5%;
+    margin-right:5%;
 }
 
 a:focus {
@@ -780,8 +781,6 @@ pre {
 }
 
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
 }
@@ -1361,7 +1360,7 @@ pre {
 
 @media (min-width: 1200px) {
     .container {
-        max-width: 1170px;
+        max-width: 1800px;
     }
 
     .col-lg-1,

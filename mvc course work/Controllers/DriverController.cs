@@ -31,11 +31,10 @@ namespace mvc_course_work.Controllers
             return View(model);
         }
        
-        public ActionResult About()
+        public ActionResult About(int Id)
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            Driver driver = unitOfWork.Drivers.GetById(Id);
+            return View(driver);
         }
     }
 }

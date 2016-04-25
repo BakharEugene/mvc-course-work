@@ -16,5 +16,6 @@ namespace mvc_course_work.Models.Entities
         public int month { get; set; }
         public virtual ICollection<Team> Team { get; set; }
         public virtual ICollection<Driver> Drivers { get; set; }
+        public virtual ICollection<Podium> podiums { get; set; }
     }
 }

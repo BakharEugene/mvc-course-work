@@ -24,7 +24,11 @@ namespace mvc_course_work.Controllers
 
         public ActionResult All()
         {
-            return View();
+            var model = new TakeAllRaces
+            {
+                Races = unitOfWork.Races.GetAll().ToList()
+            };
+            return View(model);
         }
        
         public ActionResult About()
