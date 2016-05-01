@@ -24,12 +24,15 @@ namespace mvc_course_work.Controllers
 
         public ActionResult All()
         {
-            return View();
+            var model = new mvc_course_work.Models.ViewModel.TakeAllTeams()
+            {
+                Teams = unitOfWork.Teams.GetAll().ToList()
+            };
+            return View(model);
         }
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
-
             return View();
         }
     }

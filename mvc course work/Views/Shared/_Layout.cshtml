@@ -7,9 +7,9 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     <link rel="stylesheet" href="~/Content/menu.css" />
-    <script type="text/javascript" src="~/Scripts/jquery-2.2.3.intellisense.js"></script>
     <script type="text/javascript" src="~/Scripts/jquery-2.2.3.js"></script>
-    <script type="text/javascript" src="~/Scripts/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="~/Scripts/jquery-2.2.3.intellisense.js"></script>
+
     <script type="text/javascript" src="~/Scripts/jquery.menu.js"></script>
 </head>
 <body style="background-size:100%">
@@ -22,9 +22,6 @@
     <div class="header">
         <div class="header-logo">@Html.ActionLink(" ", "Index", "Home", null, new { @class = "navbar-brand" })</div>
         <ul class="header-menu">
-            <li>
-                <a href="#">LATEST</a>
-            </li>
             <li>
                 <a href="#">DRIVERS</a>
                 <ul id="submenu">
@@ -47,7 +44,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#">Teams</a>
+                <a href="#">TEAMS</a>
                 <ul id="submenu">
                     @for (int i = 0; i < 3; i++)
                     {
@@ -57,7 +54,7 @@
                 </ul>
             </li>
             <li>
-                <a href="#">Обратная связь</a>
+                <a href="@Url.Action("Index","Contacts")">Обратная связь</a>
             </li>
             <li>
                 <a href="#">Chat</a>

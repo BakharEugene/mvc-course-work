@@ -159,6 +159,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\DriverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -169,12 +170,17 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="interfaces\IRepository.cs" />
-    <Compile Include="Migrations\201604250746069_Initial.cs" />
-    <Compile Include="Migrations\201604250746069_Initial.Designer.cs">
-      <DependentUpon>201604250746069_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201604272010394_initial.cs" />
+    <Compile Include="Migrations\201604272010394_initial.Designer.cs">
+      <DependentUpon>201604272010394_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604300801307_initial1.cs" />
+    <Compile Include="Migrations\201604300801307_initial1.Designer.cs">
+      <DependentUpon>201604300801307_initial1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Models\DAL\DriverRepository.cs" />
     <Compile Include="Models\DAL\PodiumRepository.cs" />
     <Compile Include="Models\DAL\RaceRepository.cs" />
@@ -182,6 +188,7 @@
     <Compile Include="Models\DAL\UnitOfWork.cs" />
     <Compile Include="Models\Entities\BaseEntityWithId.cs" />
     <Compile Include="Models\Entities\Driver.cs" />
+    <Compile Include="Models\Entities\EmailModel.cs" />
     <Compile Include="Models\Entities\Podium.cs" />
     <Compile Include="Models\Entities\Race.cs" />
     <Compile Include="Models\Entities\Team.cs" />
@@ -201,6 +208,10 @@
     <Content Include="Content\driver.css" />
     <Content Include="Content\menu.css" />
     <Content Include="Content\races.css" />
+    <Content Include="Content\style.css" />
+    <Content Include="Content\team.css" />
+    <Content Include="Content\timer.css" />
+    <Content Include="Content\validator.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -229,14 +240,36 @@
     <Content Include="Images\faces\Sergio Perez.jpg" />
     <Content Include="Images\faces\Stoffel Vandoorne.jpg" />
     <Content Include="Images\faces\Valtteri Bottas.jpg" />
+    <Content Include="Images\icons\cup.png" />
+    <Content Include="Images\icons\helmet.png" />
+    <Content Include="Images\icons\podium.png" />
     <Content Include="Images\MainWallpapper.jpg" />
+    <Content Include="Images\teams\Ferrari.jpg" />
+    <Content Include="Images\teams\Force India.jpg" />
+    <Content Include="Images\teams\Haas.jpg" />
+    <Content Include="Images\teams\Manor.jpg" />
+    <Content Include="Images\teams\McLaren.jpg" />
+    <Content Include="Images\teams\Mersedes.jpg" />
+    <Content Include="Images\teams\RedBullRacing.jpg" />
+    <Content Include="Images\teams\Renault.jpg" />
+    <Content Include="Images\teams\Sauber.jpg" />
+    <Content Include="Images\teams\Toro Rosso.jpg" />
+    <Content Include="Images\teams\Williams.jpg" />
     <Content Include="Images\wallpapper1.jpg" />
     <Content Include="Images\wallpapper2.jpg" />
     <Content Include="Images\wallpapper3.jpg" />
     <Content Include="Images\wallpapper4.jpg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <None Include="Scripts\jquery-2.2.3.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <None Include="Scripts\jquery-2.2.3.intellisense.js" />
+    <Content Include="Scripts\contact.js" />
+    <Content Include="Scripts\countdown.js" />
     <Content Include="Scripts\jquery-2.2.3.js" />
     <Content Include="Scripts\jquery-2.2.3.min.js" />
     <Content Include="Scripts\jquery.menu.js" />
@@ -286,20 +319,22 @@
     <Content Include="Views\Team\Index.cshtml" />
     <Content Include="Views\Race\All.cshtml" />
     <Content Include="Views\Race\Index.cshtml" />
+    <Content Include="Views\Contacts\Index.cshtml" />
+    <Content Include="Views\Contacts\SendMail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604250746069_Initial.resx">
-      <DependentUpon>201604250746069_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201604272010394_initial.resx">
+      <DependentUpon>201604272010394_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604300801307_initial1.resx">
+      <DependentUpon>201604300801307_initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -91,12 +91,6 @@
         transition-duration: 0.9s;
     }
 
-    .blck:hover .text {
-    }
-
-    .blck .text {
-    }
-
     .blck:hover .text a {
         transition-property: color;
         margin-top: 0px;

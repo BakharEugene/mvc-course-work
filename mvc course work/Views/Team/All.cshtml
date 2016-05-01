@@ -1,14 +1,45 @@
-﻿<!DOCTYPE html>
-
+﻿@model mvc_course_work.Models.ViewModel.TakeAllTeams
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="~/Content/driver.css" />
+    <link rel="stylesheet" href="~/Content/team.css" />
     <title></title>
 </head>
 <body>
-    <div>
-    kek
+    <div class="teams">
+        <ul>
+            @foreach (var b in Model.Teams)
+            {
+                <li class="blck">
+                    <a href="@Url.Action("Index","Team",new {b.Id})">
+                        <div class="photo">
+                            <img src="@b.Photo" />
+                        </div>
+                        <div class="text">
+                            <p>@b.Name</p>
+                            @foreach (var driver in b.Drivers)
+                            {
+                                <div class="driver">
+                                    <img src="~/Images/icons/helmet.png" />
+                                    <a href="@Url.Action("Index", "Driver", new {driver.Id })"><p>@driver.familyName @driver.name</p></a>
+                                </div>
+                            }
+                            <div class="div-stats">
+                                <div class="driver">
+                                    <img src="~/Images/icons/podium.png" />
+                                    <p>@b.PodiumFinishes</p>
+                                </div>
+                                <div class="driver">
+                                    <img src="~/Images/icons/cup.png" />
+                                    <p>@b.ChampinionshipTitles</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            }
+        </ul>
     </div>
 </body>
 </html>

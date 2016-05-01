@@ -1,20 +1,66 @@
 ﻿<!DOCTYPE html>
+@model mvc_course_work.Models.ViewModel.TakeAllInfo
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="~/Content/driver.css" />
-    <script type="text/javascript" src="~/Scripts/jquery-2.2.3.intellisense.js"></script>
-    <script type="text/javascript" src="~/Scripts/jquery-2.2.3.js"></script>
-    <script type="text/javascript" src="~/Scripts/jquery-2.2.3.min.js"></script>
-    <script type="text/javascript" src="~/Scripts/jquery.main-page.js"></script>
+    <meta charset="utf-8" />
+    <title>A jQuery Countdown Timer | Tutorialzine Demo</title>
+    <script type="text/javascript" src="~/Scripts/countdown.js"></script>
+
+    <script type="text/javascript">
+        $(function () { //ффункция
+
+            var note = $('#note'),
+                ts = new Date(0),
+                newYear = true;
+
+            if ((new Date()) > ts) {
+                ts = (new Date()).getTime() + 4 * 7 * 10 * 24 * 60 * 60 * 1000; //   <- время!!!!
+                newYear = false;
+            }
+
+            $('#countdown').countdown({
+                timestamp: ts,
+                callback: function (month, week, days, hours, minutes, seconds) {
+
+                    var message = "";
+
+                    message += month + "month" + (month == 1 ? '' : 's') + ", "
+                    message += week + "week" + (week == 1 ? '' : 's') + ", "
+
+                    message += days + " day" + (days == 1 ? '' : 's') + ", ";
+                    message += hours + " hour" + (hours == 1 ? '' : 's') + ", ";
+                    message += minutes + " minute" + (minutes == 1 ? '' : 's') + " and ";
+                    message += seconds + " second" + (seconds == 1 ? '' : 's') + " <br />";
+
+                    if (newYear) {
+                        message += "left until the new year!";
+                    }
+                    else {
+                        message += "left until the new race";
+                    }
+
+                    note.html(message);
+                }
+            });
+
+        });
+        // как с бд параметры принимать хуй знает. Если влом разбираться тебе будет или не знаешь как, то я к Рудиковой сгоняю всё сделаю.
+        // ну и чатик за мной.
+
+    </script>
+    
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
+    <link rel="stylesheet" href="~/Content/timer.css" />
     <link rel="stylesheet" href="~/Content/countdown.css" />
-    <title;></title;>
+
+
 </head>
+
 <body>
-     @{
-         mvc_course_work.Models.DAL.UnitOfWork unit = new mvc_course_work.Models.DAL.UnitOfWork();
-         var races=unit.Races.GetAll();
-     }
+
     <div id="countdown"></div>
+    <p id="note"></p>
+   
 </body>
 </html>
+

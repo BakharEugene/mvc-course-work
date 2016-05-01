@@ -1,0 +1,101 @@
+﻿body {
+    background: url("../Images/MainWallpapper.jpg");
+    background-size: auto;
+}
+
+.biography {
+    margin-top: 10px;
+}
+
+
+
+    .biography table {
+        font-size: 30px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+        .biography table td {
+            width: 300px;
+        }
+
+.information {
+    font-size: 20px;
+}
+
+.p {
+    position: relative;
+}
+
+.biography {
+    height: auto;
+}
+
+.teams .blck {
+    clear: both;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    vertical-align: top;
+    text-align: left;
+    margin-left: 0px;
+}
+
+
+.teams {
+    clear: both;
+    text-align: center;
+    width: 100%;
+}
+
+    .teams ul {
+        width: 100%;
+    }
+    .driver p{
+        font-size:30px;
+    }
+.blck img {
+    float: left;
+    height: 100%;
+    width: 50%;
+}
+
+.blck {
+    background: #fff;
+    margin-top: 20px;
+}
+
+
+    .blck .text {
+        margin-left: 51%;
+        margin-top: 5%;
+        font-size: large;
+        font-family: fantasy;
+        color: #000;
+    }
+
+        .blck .text p {
+            margin-left: 20px;
+        }
+
+        .blck .text .driver img {
+            height: 35px;
+            width: 35px;
+        }
+
+        .blck .text a {
+            font-size:30px;
+            font-family: fantasy;
+            color: #000;
+        }
+
+    .blck:hover {
+        transition-property: background;
+        background: #000;
+        transition-duration: 1s;
+    }
+
+        .blck:hover .text p {
+            transition-property: color;
+            color: #fff;
+            transition-duration: 1s;
+        }

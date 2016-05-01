@@ -24,9 +24,10 @@ namespace mvc_course_work.Models
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
+        public DbSet<Team> Teams { get; set; }
+
         public DbSet<Driver> Drivers { get; set; }
         public DbSet<Race> Races { get; set; }
-        public DbSet<Team> Teams { get; set; }
         public DbSet<Podium> Podiums { get; set; }
         public static ApplicationDbContext Create()
         {

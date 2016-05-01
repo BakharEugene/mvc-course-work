@@ -8,11 +8,19 @@
     <link rel="stylesheet" href="~/Content/races.css" />
 </head>
 <body>
-    <ul>
-   @foreach(var b in Model.Races)
-   {
-       <li><a href="@Url.Action("Index", "Race", new { b.Id })">@b.Name</a></li>
-   }
+    <div class="drivers">
+        <ul>
+            @foreach (var b in Model.Races)
+            {
+                <li class="blck">
+                    <div class="text">
+                        <a href="@Url.Action("Index", "Driver", new {b.Id})">
+                            <img src="@b.photo" />@b.Name
+                        </a>
+                    </div>
+                </li>
+            }
         </ul>
+    </div>
 </body>
 </html>

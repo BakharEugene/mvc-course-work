@@ -30,11 +30,5 @@ namespace mvc_course_work.Controllers
             };
             return View(model);
         }
-       
-        public ActionResult About(int Id)
-        {
-            Driver driver = unitOfWork.Drivers.GetById(Id);
-            return View(driver);
-        }
     }
 }
