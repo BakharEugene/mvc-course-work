@@ -41,10 +41,23 @@ section, footer{
 	text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
 	width: 600px;
 }
+/*-------------------------
+	Simple reset
+--------------------------*/
 
 
-/*----------------------------
-	The Footer
------------------------------*/
+*{
+	margin:0;
+	padding:0;
+}
 
 
+/*-------------------------
+	General Styles
+--------------------------*/
+
+
+html{
+    background:url('/Images/MainWallpapper.jpg') !important;
+	position:relative;
+}

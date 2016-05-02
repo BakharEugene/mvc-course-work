@@ -7,18 +7,18 @@
     <script type="text/javascript" src="~/Scripts/countdown.js"></script>
 
     <script type="text/javascript">
-        $(function () { //ффункция
+        $(function () { 
 
             var note = $('#note'),
                 ts = new Date(0),
                 newYear = true;
 
             if ((new Date()) > ts) {
-                ts = (new Date()).getTime() + 4 * 7 * 10 * 24 * 60 * 60 * 1000; //   <- время!!!!
+                ts = (new Date()).getTime() + 4 * 7 * 10 * 24 * 60 * 60 * 1000; 
                 newYear = false;
             }
 
-            $('#countdown').countdown({
+            $('#countdown').countdown({ 
                 timestamp: ts,
                 callback: function (month, week, days, hours, minutes, seconds) {
 
@@ -36,7 +36,7 @@
                         message += "left until the new year!";
                     }
                     else {
-                        message += "left until the new race";
+                        message += "to the new race";
                     }
 
                     note.html(message);
@@ -44,9 +44,6 @@
             });
 
         });
-        // как с бд параметры принимать хуй знает. Если влом разбираться тебе будет или не знаешь как, то я к Рудиковой сгоняю всё сделаю.
-        // ну и чатик за мной.
-
     </script>
     
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
@@ -56,9 +53,11 @@
 
 </head>
 
-<body>
+<body >
 
-    <div id="countdown"></div>
+    <div id="countdown" >
+
+    </div>
     <p id="note"></p>
    
 </body>
