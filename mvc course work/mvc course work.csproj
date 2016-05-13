@@ -39,7 +39,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ActionMailer.Net, Version=0.7.4.0, Culture=neutral, PublicKeyToken=e62db3114c02a1c2, processorArchitecture=MSIL">
+      <HintPath>..\packages\ActionMailer.0.7.4\lib\Net40\ActionMailer.Net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ActionMailer.Net.Mvc, Version=0.7.4.0, Culture=neutral, PublicKeyToken=e62db3114c02a1c2, processorArchitecture=MSIL">
+      <HintPath>..\packages\ActionMailer.0.7.4\lib\Net40\ActionMailer.Net.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Mvc.Mailer, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MvcMailer.4.5\lib\45\Mvc.Mailer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -170,13 +182,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="interfaces\IRepository.cs" />
-    <Compile Include="Migrations\201604272010394_initial.cs" />
-    <Compile Include="Migrations\201604272010394_initial.Designer.cs">
-      <DependentUpon>201604272010394_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201604300801307_initial1.cs" />
-    <Compile Include="Migrations\201604300801307_initial1.Designer.cs">
-      <DependentUpon>201604300801307_initial1.cs</DependentUpon>
+    <Compile Include="Migrations\201605120908430_initial.cs" />
+    <Compile Include="Migrations\201605120908430_initial.Designer.cs">
+      <DependentUpon>201605120908430_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -192,6 +200,7 @@
     <Compile Include="Models\Entities\Podium.cs" />
     <Compile Include="Models\Entities\Race.cs" />
     <Compile Include="Models\Entities\Team.cs" />
+    <Compile Include="Models\Entities\Video.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ViewModel\TakeAllDrivers.cs" />
@@ -207,6 +216,7 @@
     <Content Include="Content\countdown.css" />
     <Content Include="Content\driver.css" />
     <Content Include="Content\menu.css" />
+    <Content Include="Content\race.css" />
     <Content Include="Content\races.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\team.css" />
@@ -244,6 +254,48 @@
     <Content Include="Images\icons\helmet.png" />
     <Content Include="Images\icons\podium.png" />
     <Content Include="Images\MainWallpapper.jpg" />
+    <Content Include="Images\races\maps\2016 FORMULA 1 BELGIAN GRAND PRIX.png" />
+    <Content Include="Images\races\maps\2016 FORMULA 1 BRITISH GRAND PRIX.png" />
+    <Content Include="Images\races\maps\2016 FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX.png" />
+    <Content Include="Images\races\maps\2016 FORMULA 1 GRAND PRIX OF EUROPE.png" />
+    <Content Include="Images\races\maps\2016 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX.png" />
+    <Content Include="Images\races\maps\2016 FORMULA 1 JAPANESE GRAND PRIX.png" />
+    <Content Include="Images\races\maps\2016 FORMULA 1 PETRONAS MALAYSIA GRAND PRIX.png" />
+    <Content Include="Images\races\maps\2016 FORMULA 1 PIRELLI CHINESE GRAND PRIX.png" />
+    <Content Include="Images\races\maps\2016 FORMULA 1 ROLEX AUSTRALIAN GRAND PRIX.png" />
+    <Content Include="Images\races\maps\2016 FORMULA 1 RUSSIAN GRAND PRIX.png" />
+    <Content Include="Images\races\maps\2016 FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX.png" />
+    <Content Include="Images\races\maps\2016 FORMULA 1 UNITED STATES GRAND PRIX.png" />
+    <Content Include="Images\races\maps\FORMULA 1 GRAN PREMIO D%27ITALIA 2016.png" />
+    <Content Include="Images\races\maps\FORMULA 1 GRAN PREMIO DE ESPAÑA PIRELLI 2016.png" />
+    <Content Include="Images\races\maps\FORMULA 1 GRAN PREMIO DE MÉXICO 2016.png" />
+    <Content Include="Images\races\maps\FORMULA 1 GRAND PRIX DE MONACO 2016.png" />
+    <Content Include="Images\races\maps\FORMULA 1 GRAND PRIX DU CANADA 2016.png" />
+    <Content Include="Images\races\maps\FORMULA 1 GRANDE PRÊMIO DO BRASIL 2016.png" />
+    <Content Include="Images\races\maps\FORMULA 1 GROSSER PREIS VON DEUTSCHLAND 2016.png" />
+    <Content Include="Images\races\maps\FORMULA 1 GROSSER PREIS VON ÖSTERREICH 2016.png" />
+    <Content Include="Images\races\maps\FORMULA 1 MAGYAR NAGYDÍJ 2016.png" />
+    <Content Include="Images\races\races\2016 FORMULA 1 BELGIAN GRAND PRIX.jpg" />
+    <Content Include="Images\races\races\2016 FORMULA 1 BRITISH GRAND PRIX.jpg" />
+    <Content Include="Images\races\races\2016 FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX.jpg" />
+    <Content Include="Images\races\races\2016 FORMULA 1 GRAND PRIX OF EUROPE.jpg" />
+    <Content Include="Images\races\races\2016 FORMULA 1 GULF AIR BAHRAIN GRAND PRIX.jpg" />
+    <Content Include="Images\races\races\2016 FORMULA 1 JAPANESE GRAND PRIX.jpg" />
+    <Content Include="Images\races\races\2016 FORMULA 1 PETRONAS MALAYSIA GRAND PRIX.jpg" />
+    <Content Include="Images\races\races\2016 FORMULA 1 PIRELLI CHINESE GRAND PRIX.jpg" />
+    <Content Include="Images\races\races\2016 FORMULA 1 ROLEX AUSTRALIAN GRAND PRIX.jpg" />
+    <Content Include="Images\races\races\2016 FORMULA 1 RUSSIAN GRAND PRIX.jpg" />
+    <Content Include="Images\races\races\2016 FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX.jpg" />
+    <Content Include="Images\races\races\2016 FORMULA 1 UNITED STATES GRAND PRIX.jpg" />
+    <Content Include="Images\races\races\FORMULA 1 GRAN PREMIO D%27ITALIA 2016.jpg" />
+    <Content Include="Images\races\races\FORMULA 1 GRAN PREMIO DE ESPAÑA PIRELLI 2016.jpg" />
+    <Content Include="Images\races\races\FORMULA 1 GRAN PREMIO DE MÉXICO 2016.jpg" />
+    <Content Include="Images\races\races\FORMULA 1 GRAND PRIX DE MONACO 2016.jpg" />
+    <Content Include="Images\races\races\FORMULA 1 GRAND PRIX DU CANADA 2016.jpg" />
+    <Content Include="Images\races\races\FORMULA 1 GRANDE PRÊMIO DO BRASIL 2016.jpg" />
+    <Content Include="Images\races\races\FORMULA 1 GROSSER PREIS VON DEUTSCHLAND 2016.jpg" />
+    <Content Include="Images\races\races\FORMULA 1 GROSSER PREIS VON ÖSTERREICH 2016.jpg" />
+    <Content Include="Images\races\races\FORMULA 1 MAGYAR NAGYDÍJ 2016.jpg" />
     <Content Include="Images\teams\Ferrari.jpg" />
     <Content Include="Images\teams\Force India.jpg" />
     <Content Include="Images\teams\Haas.jpg" />
@@ -320,7 +372,7 @@
     <Content Include="Views\Race\All.cshtml" />
     <Content Include="Views\Race\Index.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
-    <Content Include="Views\Contacts\SendMail.cshtml" />
+    <Content Include="Views\Contacts\Sent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -330,11 +382,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201604272010394_initial.resx">
-      <DependentUpon>201604272010394_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201604300801307_initial1.resx">
-      <DependentUpon>201604300801307_initial1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605120908430_initial.resx">
+      <DependentUpon>201605120908430_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

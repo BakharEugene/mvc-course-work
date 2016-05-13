@@ -1,12 +1,14 @@
 ﻿<!DOCTYPE html>
+@model mvc_course_work.Models.Entities.EmailModel
 <html>
 <head>
     <meta charset="UTF-8">
     <title>Bootstrap 3 Contact form with Validation</title>
     <link rel="stylesheet" href="~/Content/style.css">
 
-
-    <script>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.0/css/bootstrapValidator.min.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.js"></script>
+     <script>
         $(document).ready(function () {
             $('#contact_form').bootstrapValidator({
                 // To use feedback icons, ensure that you use Bootstrap v3.1.0 or later
@@ -54,7 +56,8 @@
                             phone: {
                                 country: 'US',
                                 message: 'Please supply a vaild phone number with area code'
-                            }
+                            },
+                         
                         }
                     },
                     address: {
@@ -244,7 +247,14 @@
             <div class="form-group">
                 <label class="col-md-4 control-label"></label>
                 <div class="col-md-4">
-                    <button type="submit" class="btn btn-warning">Send <span class="glyphicon glyphicon-send"></span></button>
+                   
+                    <button type="submit" class="btn btn-warning" 
+                            onclick="@{
+                             var controller = new mvc_course_work.Controllers.ContactsController();
+                             var temp = controller.Contact(Model);
+                             if (temp != null) {temp.Wait();}}">
+                            Send 
+                            <span class="glyphicon glyphicon-send"></span></button>
                 </div>
             </div>
             </fieldset>

@@ -1,15 +1,141 @@
 ﻿@model mvc_course_work.Models.Entities.Race
-
 <!DOCTYPE html>
 
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/race.css" />
     <title></title>
 </head>
 <body>
-    <div>
-    
+    <div class="race-header">
+        <div class="race-header-flag">
+            <!--flag-->
+            <img src="http://www.formula1.com/content/fom-website/en/championship/races/2016/Australia/_jcr_content/countryFlag.img.jpg/1423096962761.jpg" />
+        </div>
+        <!--Race Name-->
+        <h1>@Model.Name</h1>
+        <!--Race City-->
+        <h2>@Model.country</h2>
+    </div>
+    <div class="race">
+        <div class="circuit">
+            <div class="circuit-header">
+                <h3>@Model.Name</h3>
+            </div>
+            <div class="circuit-info">
+                <div class="circuit-info-table">
+                    <div class="circuit-info-container">
+                        <h5 class="circuit-info-title">First Grand Prix</h5>
+                        <p class="circuit-info-value">@Model.firstGrandPrix</p>
+                    </div>
+
+                    <div class="circuit-info-container">
+                        <h5 class="circuit-info-title">
+                            Number
+                            <br />
+                            of Laps
+                        </h5>
+                        <p class="circuit-info-value">@Model.numberOfLaps</p>
+                    </div>
+
+                    <div class="circuit-info-container">
+                        <h5 class="circuit-info-title">Circuit Length</h5>
+                        <p class="circuit-info-value">
+                            @Model.circuitLength<span class="subtext">KM</span>
+                        </p>
+                    </div>
+
+
+                    <div class="circuit-info-container">
+                        <h5 class="circuit-info-title">Race Distance</h5>
+                        <p class="circuit-info-value">
+                            @Model.raceDistance<span class="subtext">KM</span>
+                        </p>
+                    </div>
+
+                    <div class="circuit-info-container">
+                        <h5 class="circuit-info-title">
+                            Lap<br />
+                            Record
+                        </h5>
+                        <p class="circuit-info-value">@Model.lapRecord</p>
+                    </div>
+                </div>
+
+
+                <div class="circuit-map">
+                    <img src="@Model.mapPhoto" />
+                </div>
+            </div>
+        </div>
+        <!--
+                <div class="references">
+                    <ul>
+                        <li>ref1</li>
+                        <li>ref2</li>
+                        <li>ref3</li>
+                    </ul>
+                </div>
+        -->
+    </div>
+
+    <div class="content">
+        <div class="content-text">
+            <h3>Melbourne</h3>
+            <p>
+                When Formula One came to Australia in 1985 it set up home in Adelaide. However, ex-racer-turned-entrepreneur Bob Jane wanted a race in Melbourne. He created a huge 'thunderdome' and invented the AUSCAR series, bringing NASCAR action to Australia.
+                <br />
+                <br />
+                The desire to have a race in Melbourne did not wane. Despite the popular end of season slot for the Adelaide race, pressure was growing from the Melbourne motor sport community, and in 1992 Jeff Kennett was elected the new premier of the State of Victoria. He immediately set about improving Melbourne's profile. First on his list was the Australian Grand Prix.
+                <br />
+                <br />
+                An agreement was reached with Formula One in 1993, but the contract with Adelaide did not expire until 1995, so Kennett had plenty of time to prepare.
+                <br />
+                <br />
+                A track was developed in Melbourne's beautiful Albert Park, part of it using closed-off public roads, and in 1996 the city held the first round of the world championship.
+                <br />
+                <br />
+                Since then the race has become very popular with drivers and fans alike, and the party atmosphere of Melbourne keeps them coming back year after year.
+            </p>
+        </div>
+        <div class="content-images">
+            <div class="content-images-container">
+                <img src="~/Images/Races/Preview/2016 FORMULA 1 RUSSIAN GRAND PRIX.jpg" />
+                <div class="content-images-header">
+                    Formula One World Championship, Rd1, Australian Grand Prix, Practice, Albert Park, Melbourne, Australia, Friday 14 March 2014.
+
+                </div>
+            </div>
+            <div class="content-images-container">
+                <img src="~/Images/wallpapper2.jpg" />
+                <div class="content-images-header">
+                    Formula One World Championship, Rd1, Australian Grand Prix, Practice, Albert Park, Melbourne, Australia, Friday 14 March 2014.
+
+                </div>
+            </div>
+            <div class="content-images-container">
+                <img src="~/Images/wallpapper2.jpg" />
+                <div class="content-images-header">
+                    Formula One World Championship, Rd1, Australian Grand Prix, Practice, Albert Park, Melbourne, Australia, Friday 14 March 2014.
+
+                </div>
+            </div>
+            <div class="content-images-container">
+                <img src="~/Images/wallpapper2.jpg" />
+                <div class="content-images-header">
+                    Formula One World Championship, Rd1, Australian Grand Prix, Practice, Albert Park, Melbourne, Australia, Friday 14 March 2014.
+
+                </div>
+            </div>
+            <div class="content-images-container">
+                <img src="~/Images/wallpapper1.jpg" />
+                <div class="content-images-header">
+                    Formula One World Championship, Rd1, Australian Grand Prix, Practice, Albert Park, Melbourne, Australia, Friday 14 March 2014.
+
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>

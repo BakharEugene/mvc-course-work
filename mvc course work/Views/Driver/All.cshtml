@@ -24,7 +24,8 @@
                 <li class="blck">
                     <div class="text">
                         <a href="@Url.Action("Index", "Driver", new {b.Id})">
-                        <img src="@b.picture" />@b.name @b.familyName</a>
+                            <div class="image"><img src="@b.picture" /></div>@b.name @b.familyName
+                        </a>
                         <p>@b.Team.Name</p>
                         <p class="id">@b.number</p>
                     </div>

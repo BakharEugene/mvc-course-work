@@ -1,20 +1,22 @@
 ﻿.body {
     background-size: 100%;
-    padding:0;  
+    padding: 0;
 }
 
-.last a{
-   color:#ff0000 !important;
-    background:#000 !important;
+.last a {
+    color: #ff0000 !important;
+    background: #000 !important;
 }
-.header-menu .last a:hover{
-    transition-property:color,background;
-    transition:0.5s;
-    background:#ff0000;
-    color:#000
+
+.header-menu .last a:hover {
+    transition-property: color,background;
+    transition: 0.5s;
+    background: #ff0000;
+    color: #000;
 }
+
 .header {
-    width:100%;
+    width: 100%;
     background: #000;
     display: table; /* centers modern browsers */
     margin-left: auto;
@@ -22,17 +24,17 @@
 }
 
 .header-logo {
+    width:10%;
     float: left;
     margin: 0;
     padding: 0;
 }
 
 .header-menu {
-    
+    width: 60%;
     float: left;
     margin: 0;
     padding: 0;
-
 }
 
     .header-menu li a {
@@ -44,7 +46,7 @@
         float: left;
         position: relative;
         display: block;
-        width: 150px;
+        width: 16%;
         background: #000;
     }
 
@@ -67,14 +69,13 @@
     }
 
     .header-menu li:hover {
-       
     }
 
     .header-menu li a:hover {
         color: #fff;
-        transition-property:background;
-        transition:0.5s;
-        background:#ff0000; 
+        transition-property: background;
+        transition: 0.5s;
+        background: #ff0000;
         display: block;
     }
 
@@ -87,6 +88,11 @@
     margin: 0;
     padding: 0;
 }
+
+    #submenu li {
+        width:100%;
+    
+    }
 
 .header-login {
     float: right;

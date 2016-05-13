@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Net;
 namespace mvc_course_work.Models.Entities
 {
-    public class Email
+    public class EmailModel
     {
 
         [Required, Display(Name = "Your name")]
@@ -17,6 +17,12 @@ namespace mvc_course_work.Models.Entities
         public string FromEmail { get; set; }
         [Required]
         public string Message { get; set; }
+
+        public void sendMessage()
+        {
+            mvc_course_work.Controllers.ContactsController ctrl = new Controllers.ContactsController();
+            var res = ctrl.Contact(new EmailModel());
+        }
 
     }
 }

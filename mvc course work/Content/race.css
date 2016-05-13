@@ -1,0 +1,160 @@
+﻿body {
+    font-size: 12px;
+    background: url(../images/MainWallpapper.jpg);
+    font-family: arial;
+    background-size: 100%;
+}
+
+.race {
+    background-color: #FFFFFF;
+    padding: 25px;
+    margin: 10px;
+    display: compact;
+}
+
+.race-header {
+    padding: 5px;
+    margin: 15px;
+    display: compact;
+}
+
+    .race-header .race-header-flag {
+        display: block;
+        float: left;
+        height: 32px;
+        margin-right: 10px;
+        margin-bottom: 25px;
+        width: 48px;
+    }
+
+        .race-header .race-header-flag img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+    .race-header h1 {
+        color: #1e1e1e;
+        font-size: 18px;
+        font-size: 1.8rem;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+
+    .race-header h2 {
+        color: #4a4a4a;
+        font-weight: 600;
+        font-size: 14px;
+        font-size: 1.4rem;
+        letter-spacing: 0;
+        line-height: 1;
+        margin: 0;
+    }
+
+.race .circuit .circuit-header .h3 {
+    color: #1e1e1e;
+    font-size: 16px ;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: .2px;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-top: 45px;
+    width: 50%;
+}
+
+.race .circuit .circuit-info .circuit-info-table .circuit-info-container {
+    float: left;
+    margin-right: 7.65%;
+}
+
+    .race .circuit .circuit-info .circuit-info-table .circuit-info-container .circuit-info-title {
+        color: #545454;
+        font-size: 12px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-align: left;
+        text-transform: uppercase;
+        width: 76px;
+        margin-bottom: 15px;
+    }
+
+    .race .circuit .circuit-info .circuit-info-table .circuit-info-container .circuit-info-value {
+        color: #1e1e1e;
+        font-size: 20px;
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 1.15;
+        text-transform: uppercase;
+    }
+
+        .race .circuit .circuit-info .circuit-info-table .circuit-info-container .circuit-info-value .subtext {
+            display: block;
+            font-size: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            width: 65px;
+        }
+
+.race .circuit .circuit-info .circuit-info-value .subtext {
+    font-size: 10px;
+    font-size: 1rem;
+}
+
+.race .circuit .circuit-info .circuit-map {
+    margin-top: 35px;
+}
+
+    .race .circuit .circuit-info .circuit-map img {
+        width: 100%;
+    }
+
+/*.race .references {
+    padding-top: 25px;
+}
+    .race .references ul {
+        list-style: none;
+    }
+        .race .references ul li {
+            color: #aa0c0c;
+            font-size: 14px;
+            font-size: 1.4rem;
+            font-weight: 600;
+            text-align: left;
+            text-transform: uppercase;
+            width: 76px;
+            margin-bottom: 15px;
+        }*/
+
+.content {
+    background-color: #FFFFFF;
+    padding: 25px;
+    margin: 10px;
+    display: compact;
+}
+
+    .content .content-text h3 {
+        font-weight: 600;
+        font-size: xx-large;
+    }
+
+    .content .content-text p {
+        font-size: medium;
+    }
+
+    .content .content-images .content-images-container {
+        padding: 25px;
+        width: 100%;
+    }
+
+     .content .content-images .content-images-container img {
+        width: 100%;
+    }
+
+    .content .content-images .content-images-header {
+        font-weight:400;
+       margin-top:15px;
+        font-size:16px;
+    }

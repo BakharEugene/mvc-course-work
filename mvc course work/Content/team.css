@@ -50,9 +50,11 @@
     .teams ul {
         width: 100%;
     }
-    .driver p{
-        font-size:30px;
-    }
+
+.driver p {
+    font-size: 30px;
+}
+
 .blck img {
     float: left;
     height: 100%;
@@ -83,7 +85,7 @@
         }
 
         .blck .text a {
-            font-size:30px;
+            font-size: 30px;
             font-family: fantasy;
             color: #000;
         }

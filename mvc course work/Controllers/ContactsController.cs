@@ -10,32 +10,36 @@ using System.Net.Mail;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using mvc_course_work.Models;
+using mvc_course_work.Models.Entities;
 namespace mvc_course_work.Controllers
 {
     public class ContactsController : Controller
     {
-        public ContactsController()
-        {
-
-        }
         public ActionResult Index()
         {
-            var model = new mvc_course_work.Models.ContactViewModel();
-            return View(model);
-
+            return View();
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Contact()
+        public async Task<ActionResult> Contact(EmailModel model)
         {
-            var model =new  mvc_course_work.Models.Entities.Email();
+            if (model == null)
+            {
+                return null;
+            }
+            if (model.FromEmail == null || model.FromName == null || model.Message == null)
+            {
+                return null;
+            }
+            try
+            {
+
             if (ModelState.IsValid)
             {
                 var body = "<p>Email From: {0} ({1})</p><p>Message:</p><p>{2}</p>";
                 var message = new MailMessage();
-                message.To.Add(new MailAddress("eugenebakhar@gmail.com"));  // replace with valid value 
-                message.From = new MailAddress("zenia31@mail.ru");  // replace with valid value
+                message.To.Add(new MailAddress("Formula1project.contact@gmail.com"));  // replace with valid value 
+                message.From = new MailAddress("eugenebakhar@gmail.com");  // replace with valid value
                 message.Subject = "Your email subject";
                 message.Body = string.Format(body, model.FromName, model.FromEmail, model.Message);
                 message.IsBodyHtml = true;
@@ -44,8 +48,8 @@ namespace mvc_course_work.Controllers
                 {
                     var credential = new NetworkCredential
                     {
-                        UserName = "user@outlook.com",  // replace with valid value
-                        Password = "password"  // replace with valid value
+                        UserName = "Formula1project.contact@gmail.com",  // replace with valid value
+                        Password = "4)kobejan"  // replace with valid value
                     };
                     smtp.Credentials = credential;
                     smtp.Host = "smtp-mail.outlook.com";
@@ -55,8 +59,16 @@ namespace mvc_course_work.Controllers
                     return RedirectToAction("Sent");
                 }
             }
+                
+            } catch (Exception ex)
+            {
+                return null;
+            }
             return View(model);
         }
-
+        public ActionResult Sent()
+        {
+            return View();
+        }
     }
 }

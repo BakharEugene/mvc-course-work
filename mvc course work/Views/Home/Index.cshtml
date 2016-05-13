@@ -7,26 +7,24 @@
     <script type="text/javascript" src="~/Scripts/countdown.js"></script>
 
     <script type="text/javascript">
-        $(function () { 
-
+        $(function () {
             var note = $('#note'),
                 ts = new Date(0),
                 newYear = true;
 
             if ((new Date()) > ts) {
-                ts = (new Date()).getTime() + 4 * 7 * 10 * 24 * 60 * 60 * 1000; 
+                ts = new Date('@Model.Races[1].getDate()');
                 newYear = false;
             }
 
-            $('#countdown').countdown({ 
+            $('#countdown').countdown({
                 timestamp: ts,
-                callback: function (month, week, days, hours, minutes, seconds) {
+                callback: function (month,week, days, hours, minutes, seconds) {
 
                     var message = "";
 
                     message += month + "month" + (month == 1 ? '' : 's') + ", "
-                    message += week + "week" + (week == 1 ? '' : 's') + ", "
-
+                    message += week + "week" + (week == 1 ? '' : 's') + ",      ";
                     message += days + " day" + (days == 1 ? '' : 's') + ", ";
                     message += hours + " hour" + (hours == 1 ? '' : 's') + ", ";
                     message += minutes + " minute" + (minutes == 1 ? '' : 's') + " and ";
@@ -45,7 +43,7 @@
 
         });
     </script>
-    
+
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
     <link rel="stylesheet" href="~/Content/timer.css" />
     <link rel="stylesheet" href="~/Content/countdown.css" />
@@ -53,13 +51,15 @@
 
 </head>
 
-<body >
-
-    <div id="countdown" >
+<body>
+    <h1 style="text-align:center"> Next Race</h1>
+    <h1 style="text-align:center">@Model.Races[1].Name</h1>
+    <h1 style="text-align:center">@Model.Races[1].day:@Model.Races[1].month:@Model.Races[1].year</h1>
+    <div id="countdown">
 
     </div>
     <p id="note"></p>
-   
+
 </body>
 </html>
 
