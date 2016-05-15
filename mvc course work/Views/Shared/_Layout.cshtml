@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="~/Content/menu.css" />
     <script type="text/javascript" src="~/Scripts/jquery.menu.js"></script>
 </head>
-<body style="background-size:100%">
+<body style="background-size:100%;">
     @{
         var kek = new mvc_course_work.Models.DAL.UnitOfWork();
         List<mvc_course_work.Models.Entities.Driver> drivers = kek.Drivers.GetAll().ToList();
@@ -45,6 +45,7 @@
                 </ul>
             </li>
             <li>
+
                 <a href="#">TEAMS</a>
                 <ul id="submenu">
                     @for (int i = 0; i < 3; i++)

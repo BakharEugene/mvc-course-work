@@ -14,7 +14,8 @@ namespace mvc_course_work.Models.DAL
         private DriverRepository driverRepository;
         private RaceRepository raceRepository;
         private TeamRepository teamRepository;
-      
+        private VideoRepository videoRepository;
+
        
         public DriverRepository Drivers
         {
@@ -32,6 +33,15 @@ namespace mvc_course_work.Models.DAL
                 if (raceRepository == null)
                     raceRepository = new RaceRepository(db);
                 return raceRepository;
+            }
+        }
+        public VideoRepository Videos
+        {
+            get
+            {
+                if (videoRepository == null)
+                    videoRepository = new VideoRepository(db);
+                return videoRepository;
             }
         }
         public TeamRepository Teams

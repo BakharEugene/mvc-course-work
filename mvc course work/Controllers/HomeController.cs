@@ -35,9 +35,11 @@ namespace mvc_course_work.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            var model = new TakeAllInfo()
+            {
+               Videos=unitOfWork.Videos.GetAll().ToList()
+            };
+            return View(model);
         }
 
         public ActionResult Contact()

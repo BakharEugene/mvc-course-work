@@ -1,7 +1,25 @@
-﻿@{
-    ViewBag.Title = "About";
-}
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+﻿<!DOCTYPE html>
+@model mvc_course_work.Models.ViewModel.TakeAllInfo
+<html>
+<head>
 
-<p>Use this area to provide additional information.</p>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/Content/video.css" />
+</head>
+<body>
+    <div class="videos">
+        @foreach(var video in Model.Videos)
+        { 
+            
+        <div class="block">
+            <div class="video">
+                <iframe src="@video.path" style="height:300px ;width:300px;" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="text">
+               <p> @video.name</p>
+            </div>
+        </div>
+        }
+    </div>
+</body>
+</html>

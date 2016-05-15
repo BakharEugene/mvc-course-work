@@ -1,5 +1,4 @@
 ﻿body {
-    background: url("../Images/MainWallpapper.jpg");
     background-size: auto;
 }
 
@@ -18,14 +17,14 @@
 
 
     .biography table {
-        float:none;
+        float: none;
         font-size: 30px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     }
 
         .biography table td {
-           height:100%;
-             width: 50%;
+            height: 100%;
+            width: 50%;
         }
 
 .information {

@@ -13,7 +13,7 @@ namespace mvc_course_work.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201605120908430_initial"; }
+            get { return "201605131953227_initial"; }
         }
         
         string IMigrationMetadata.Source

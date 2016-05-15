@@ -14,6 +14,7 @@ namespace mvc_course_work.Models.Entities
         public int day { get; set; }
         public int year { get; set; }
         public int month { get; set; }
+       public  bool finished { get; set; }
         public string mapPhoto { get; set; }
         public int firstGrandPrix { get; set; }
         public int numberOfLaps { get; set; }

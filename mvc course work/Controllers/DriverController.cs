@@ -22,6 +22,7 @@ namespace mvc_course_work.Controllers
             return View(driver);
         }
 
+        [Authorize(Roles = "Admin,User")]
         public ActionResult All()
         {
             var model = new TakeAllDrivers

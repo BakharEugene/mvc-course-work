@@ -55,6 +55,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -182,9 +183,9 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="interfaces\IRepository.cs" />
-    <Compile Include="Migrations\201605120908430_initial.cs" />
-    <Compile Include="Migrations\201605120908430_initial.Designer.cs">
-      <DependentUpon>201605120908430_initial.cs</DependentUpon>
+    <Compile Include="Migrations\201605131953227_initial.cs" />
+    <Compile Include="Migrations\201605131953227_initial.Designer.cs">
+      <DependentUpon>201605131953227_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -194,6 +195,7 @@
     <Compile Include="Models\DAL\RaceRepository.cs" />
     <Compile Include="Models\DAL\TeamRepository.cs" />
     <Compile Include="Models\DAL\UnitOfWork.cs" />
+    <Compile Include="Models\DAL\VideoRepository.cs" />
     <Compile Include="Models\Entities\BaseEntityWithId.cs" />
     <Compile Include="Models\Entities\Driver.cs" />
     <Compile Include="Models\Entities\EmailModel.cs" />
@@ -208,6 +210,7 @@
     <Compile Include="Models\ViewModel\TakeAllRaces.cs" />
     <Compile Include="Models\ViewModel\TakeAllTeams.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sorting\Sorting.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -222,6 +225,7 @@
     <Content Include="Content\team.css" />
     <Content Include="Content\timer.css" />
     <Content Include="Content\validator.css" />
+    <Content Include="Content\video.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -382,8 +386,8 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201605120908430_initial.resx">
-      <DependentUpon>201605120908430_initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201605131953227_initial.resx">
+      <DependentUpon>201605131953227_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

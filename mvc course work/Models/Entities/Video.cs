@@ -5,7 +5,7 @@ using System.Web;
 
 namespace mvc_course_work.Models.Entities
 {
-    public class Video
+    public class Video:BaseEntityWithId
     {
         public string path { get; set; }
         public string name { get; set; }

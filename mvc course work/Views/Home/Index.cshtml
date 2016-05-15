@@ -13,16 +13,15 @@
                 newYear = true;
 
             if ((new Date()) > ts) {
-                ts = new Date('@Model.Races[1].getDate()');
+                ts = new Date('@Model.Races[2].getDate()');
                 newYear = false;
             }
 
             $('#countdown').countdown({
                 timestamp: ts,
-                callback: function (month,week, days, hours, minutes, seconds) {
+                callback: function (month, week, days, hours, minutes, seconds) {
 
                     var message = "";
-
                     message += month + "month" + (month == 1 ? '' : 's') + ", "
                     message += week + "week" + (week == 1 ? '' : 's') + ",      ";
                     message += days + " day" + (days == 1 ? '' : 's') + ", ";
@@ -53,13 +52,13 @@
 
 <body>
     <h1 style="text-align:center"> Next Race</h1>
-    <h1 style="text-align:center">@Model.Races[1].Name</h1>
-    <h1 style="text-align:center">@Model.Races[1].day:@Model.Races[1].month:@Model.Races[1].year</h1>
+    <h1 style="text-align:center">@Model.Races[2].Name</h1>
+    <h1 style="text-align:center">@Model.Races[2].day:@Model.Races[2].month:@Model.Races[2].year</h1>
     <div id="countdown">
 
     </div>
     <p id="note"></p>
+   
 
 </body>
 </html>
-

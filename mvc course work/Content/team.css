@@ -1,5 +1,4 @@
 ﻿body {
-    background: url("../Images/MainWallpapper.jpg");
     background-size: auto;
 }
 
@@ -93,7 +92,7 @@
     .blck:hover {
         transition-property: background;
         background: #000;
-        transition-duration: 1s;
+        transition-duration: 0.3s;
     }
 
         .blck:hover .text p {

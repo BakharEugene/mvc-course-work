@@ -18,7 +18,9 @@ namespace mvc_course_work.Models.DAL
 
         public IEnumerable<Team> GetAll()
         {
-            return _applicationDbContext.Teams.ToList();
+            List<Team> teams = _applicationDbContext.Teams.ToList();
+            IEnumerable<Team> team = teams.OrderBy(x => x.PodiumFinishes).Reverse();
+            return team.ToList();
         }
 
         public Team GetById(int? id)

@@ -7,41 +7,40 @@ using mvc_course_work.interfaces;
 using System.Data.Entity;
 namespace mvc_course_work.Models.DAL
 {
-    public class RaceRepository : IRepository<Race>
+    public class VideoRepository : IRepository<Video>
     {
         private ApplicationDbContext _applicationDbContext;
 
-        public RaceRepository(ApplicationDbContext context)
+        public VideoRepository(ApplicationDbContext context)
         {
             this._applicationDbContext = context;
         }
 
-        public IEnumerable<Race> GetAll()
+        public IEnumerable<Video> GetAll()
         {
-
-            return _applicationDbContext.Races.ToList();
+            return _applicationDbContext.Video.ToList();
         }
 
-        public Race GetById(int? id)
+        public Video GetById(int? id)
         {
-            return _applicationDbContext.Races.Find(id);
+            return _applicationDbContext.Video.Find(id);
         }
 
-        public void Create(Race item)
+        public void Create(Video item)
         {
-            _applicationDbContext.Races.Add(item);
+            _applicationDbContext.Video.Add(item);
         }
 
-        public void Update(Race item)
+        public void Update(Video item)
         {
             _applicationDbContext.Entry(item).State = EntityState.Modified;
         }
 
         public void Delete(int id)
         {
-            if (_applicationDbContext.Races.Find(id) != null)
+            if (_applicationDbContext.Video.Find(id) != null)
             {
-                _applicationDbContext.Races.Remove(_applicationDbContext.Races.Find(id));
+                _applicationDbContext.Video.Remove(_applicationDbContext.Video.Find(id));
             }
         }
     }
