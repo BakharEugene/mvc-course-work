@@ -14,5 +14,6 @@ namespace mvc_course_work.Models.Entities
         public int ChampinionshipTitles { get; set; }
         public virtual ICollection<Race> Races { get; set; }
         public string Photo { get; set; }
+
     }
 }

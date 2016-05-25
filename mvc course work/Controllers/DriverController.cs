@@ -21,9 +21,7 @@ namespace mvc_course_work.Controllers
             Driver driver = unitOfWork.Drivers.GetById(Id);
             return View(driver);
         }
-
-        [Authorize(Roles = "Admin,User")]
-        public ActionResult All()
+              public ActionResult All()
         {
             var model = new TakeAllDrivers
             {

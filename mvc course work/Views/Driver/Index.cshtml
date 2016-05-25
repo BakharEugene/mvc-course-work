@@ -7,25 +7,24 @@
     <link rel="stylesheet" href="~/Content/driver.css" />
     <title;></title;>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
-    google.charts.load('current', { 'packages': ['corechart'] });
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-        
-        var data = google.visualization.arrayToDataTable([
-          ['Year', 'podiums', 'races'],
-          ['2015', @Model.podiums.Where(x=>x.year.Equals(2015)).Count(), @Model.races.Where(x=>x.year.Equals(2015)).Count()],
-          ['2016', @Model.podiums.Where(x => x.year.Equals(2016)).Count(), @Model.races.Where(x=>x.year.Equals(2016)).Count()]
+        google.charts.load('current', { 'packages': ['bar'] });
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+              ['Year', 'Races', 'Podiums'],
+              ['2015', @Model.races.Where(x=>x.year.Equals(2015)).Count(), @Model.podiums.Where(x=>x.year.Equals(2015)).Count()],
+                  ['2016', @Model.races.Where(x=>x.year.Equals(2016)).Count(), @Model.podiums.Where(x=>x.year.Equals(2016)).Count()]
             ]);
-
             var options = {
-                title: 'Podiums',
-                curveType: 'function',
-                legend: { position: 'bottom' }
+                chart: {
+                    title: 'Driver Perfomance',
+                    subtitle: 'Races, Podiums: 2015-2016',
+                }
             };
 
-            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+            var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
 
             chart.draw(data, options);
         }
@@ -38,7 +37,10 @@
         <table cellspacing="5" cellpadding="5">
             <tr>
                 <td>Family name</td>
-                <td>@Model.familyName</td>
+                <td>
+                  
+                    @Model.familyName
+                </td>
             </tr>
             <tr>
                 <td>Name</td>
@@ -66,12 +68,10 @@
             </tr>
         </table>
     </div>
-    <p>@Model.shortBiography</p>
-    <div id="curve_chart" style="width: 900px; height: 500px"></div>
-    <p> <a href="@Url.Action("About", "Driver", new {Model.Id })">see full biography</a></p>
+    <p style="font-family:Tahoma; font-size:20px;">@Model.shortBiography</p>
+    <div id="columnchart_material" style="width: 900px; height: 500px; margin-left:auto; margin-right:auto"></div>
 
-    <iframe class="youtube-player" type="text/html" width="780" height="385"  style="margin-left:10px"src="https://www.youtube.com/embed/49LNI2S8gMA" frameborder="0"></iframe>
-    <iframe class="youtube-player" type="text/html" width="780" height="385" style="vertical-align:central" src="https://www.youtube.com/embed/DhmqADtaC_o" frameborder="0"></iframe>
-
+    <iframe class="youtube-player" type="text/html" width="780" height="385" style="margin-left:10px" src="https://www.youtube.com/embed/49LNI2S8gMA" frameborder="0"></iframe>
+    <iframe class="youtube-player" type="text/html" width="780" height="385" style="vertical-align:central" src="https://www.youtube.com/embed/DhmqADtaC_o" frameborder="0"></iframe> }
 </body>
 </html>

@@ -188,7 +188,7 @@
       <DependentUpon>201605131953227_initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ViewModel\AccountViewModels.cs" />
     <Compile Include="Models\ContactViewModel.cs" />
     <Compile Include="Models\DAL\DriverRepository.cs" />
     <Compile Include="Models\DAL\PodiumRepository.cs" />
@@ -216,6 +216,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\chat.css" />
     <Content Include="Content\countdown.css" />
     <Content Include="Content\driver.css" />
     <Content Include="Content\menu.css" />
@@ -223,6 +224,7 @@
     <Content Include="Content\races.css" />
     <Content Include="Content\style.css" />
     <Content Include="Content\team.css" />
+    <Content Include="Content\teamIndex.css" />
     <Content Include="Content\timer.css" />
     <Content Include="Content\validator.css" />
     <Content Include="Content\video.css" />
@@ -377,6 +379,7 @@
     <Content Include="Views\Race\Index.cshtml" />
     <Content Include="Views\Contacts\Index.cshtml" />
     <Content Include="Views\Contacts\Sent.cshtml" />
+    <Content Include="Views\Race\About.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

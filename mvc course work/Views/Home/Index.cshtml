@@ -7,6 +7,8 @@
     <script type="text/javascript" src="~/Scripts/countdown.js"></script>
 
     <script type="text/javascript">
+
+
         $(function () {
             var note = $('#note'),
                 ts = new Date(0),
@@ -50,7 +52,7 @@
 
 </head>
 
-<body>
+<body style="margin:8px;">
     <h1 style="text-align:center"> Next Race</h1>
     <h1 style="text-align:center">@Model.Races[2].Name</h1>
     <h1 style="text-align:center">@Model.Races[2].day:@Model.Races[2].month:@Model.Races[2].year</h1>

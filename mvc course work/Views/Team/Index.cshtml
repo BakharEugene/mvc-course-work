@@ -1,15 +1,42 @@
 ﻿@model mvc_course_work.Models.Entities.Team
-
 <!DOCTYPE html>
-
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+    <link rel="Stylesheet" href="~/Content/teamIndex.css" />
+    <link rel="Stylesheet" href="~/Content/driver.css" />
     <title></title>
 </head>
 <body>
-    <div>
-        @Model.Name
+    <h1>@Model.Name</h1>
+    <div class="content">
+<h2>Team Info</h2>
+        <table class="team-info-table">
+            <tr>
+                <td>Podium Finishes: </td>
+                <td>@Model.PodiumFinishes</td>
+            </tr>
+            <tr>
+                <td>Champinionship Titles: </td>
+                <td>@Model.ChampinionshipTitles</td>
+            </tr>
+        </table>
+    </div>
+
+<div class="drivers">
+        <ul>
+            @foreach (var b in Model.Drivers)
+            {
+                <li class="blck">
+                    <div class="text">
+                        <a href="@Url.Action("Index", "Driver", new {b.Id})">
+                        <div class="image"><img src="@b.picture" /></div>@b.name @b.familyName</a>
+                        <p>@b.Team.Name</p>
+                        <p class="id">@b.number</p>
+                    </div>
+                </li>
+            }
+        </ul>
     </div>
 </body>
 </html>

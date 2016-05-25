@@ -5,7 +5,7 @@ using System.Web;
 
 namespace mvc_course_work.Models.Entities
 {
-    public class Race:BaseEntityWithId
+    public class Race : BaseEntityWithId
     {
         public string Name { get; set; }
         public string Description { get; set; }
@@ -14,7 +14,7 @@ namespace mvc_course_work.Models.Entities
         public int day { get; set; }
         public int year { get; set; }
         public int month { get; set; }
-       public  bool finished { get; set; }
+        public bool finished { get; set; }
         public string mapPhoto { get; set; }
         public int firstGrandPrix { get; set; }
         public int numberOfLaps { get; set; }
@@ -27,10 +27,12 @@ namespace mvc_course_work.Models.Entities
 
         public string getDate()
         {
-            DateTime tm = DateTime.Now;
-            tm = tm.AddMonths(month-tm.Month);
-            tm = tm.AddDays(day-tm.Day);
-            return tm.ToString("r");
+            DateTime tm = new DateTime(2016,month,day-1,23,59,59);
+          //  tm=tm
+           // tm = tm.AddMonths(month - tm.Month);
+           // tm = tm.AddDays(day - tm.Day);
+           // tm.
+            return tm.ToString("r") + "+0300";
         }
     }
 }

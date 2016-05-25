@@ -19,8 +19,8 @@ namespace mvc_course_work.Models.DAL
         public IEnumerable<Driver> GetAll()
         {
             List<Driver> drivers = _applicationDbContext.Drivers.ToList();
-            IEnumerable<Driver> driver = drivers.OrderBy(x => x.number).Reverse();
-            return _applicationDbContext.Drivers.ToList();
+            IEnumerable<Driver> driver = drivers.OrderBy(x => x.number);
+            return driver.ToList();
         }
 
         public Driver GetById(int? id)

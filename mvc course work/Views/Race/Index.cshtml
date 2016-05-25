@@ -9,10 +9,7 @@
 </head>
 <body>
     <div class="race-header">
-        <div class="race-header-flag">
-            <!--flag-->
-            <img src="http://www.formula1.com/content/fom-website/en/championship/races/2016/Australia/_jcr_content/countryFlag.img.jpg/1423096962761.jpg" />
-        </div>
+
         <!--Race Name-->
         <h1>@Model.Name</h1>
         <!--Race City-->
@@ -78,16 +75,24 @@
                     </ul>
                 </div>
         -->
+
     </div>
 
     <div class="content">
         <div class="content-text">
             <h3>@Model.country</h3>
-            <h4s>
-               @Model.Description;
-            </h4s>
+            <h4>
+                @Model.Description;
+            </h4>
         </div>
-        
+
     </div>
+    @if (User.Identity.IsAuthenticated)
+    {
+        if (User.IsInRole("Admin"))
+        {
+            <button type="submit" name="delete" value="delete" onclick="@Model.">delete</button>
+        }
+    }
 </body>
 </html>
