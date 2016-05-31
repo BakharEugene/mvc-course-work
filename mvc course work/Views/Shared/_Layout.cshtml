@@ -59,10 +59,10 @@
                 </ul>
             </li>
             <li>
-                <a href="@Url.Action("Index","Contacts")">Обратная связь</a>
+                <a href="@Url.Action("Index","Contacts")">FEEDBACK</a>
             </li>
             <li>
-                <a href="#">Chat</a>
+                <a href="@Url.Action("Chat", "Chat")">CHAT</a>
             </li>
 
         </ul>
@@ -74,79 +74,6 @@
         @RenderBody()
         <hr />
         <footer>
-            <div id="html-chat"></div>
-            <style>
-                /* Здесь настроим css стили для чата*/
-                .holder-html-chat {
-                    border: 1px solid #ccc;
-                    padding: 10px;
-                    background-color: #fff;
-                    width: 600px;
-                }
-
-                .html-chat-history {
-                    max-width: 600px;
-                    overflow: auto;
-                    max-height: 900px;
-                    border: 1px solid #ccc;
-                    padding: 5px;
-                }
-
-                .html-chat-js-name {
-                    margin-top: 10px;
-                }
-
-                .html-chat-js-input {
-                    max-width: 600px;
-                    max-height: 100px;
-                    width: 600px;
-                    margin-top: 10px;
-                }
-
-                .html-chat-js-button-holder {
-                    margin-bottom: 0px;
-                    margin-top: 10px;
-                }
-
-                    .html-chat-js-button-holder input {
-                        width: 220px;
-                    }
-
-                .html-chat-js-answer {
-                    float: right;
-                }
-
-                    .html-chat-js-answer a {
-                        color: #777;
-                        font-size: 12px;
-                        font-family: cursive;
-                    }
-
-                        .html-chat-js-answer a:hover {
-                            color: #338;
-                            font-size: 12px;
-                            font-family: cursive;
-                        }
-
-                .html-chat-msg {
-                    margin: 0px;
-                }
-            </style>
-
-            <script>
-
-                /**
-                 * Чат работает на comet-server.ru
-                 * По любым вопросам обращайтесь support@comet-server.ru или на сайт comet-server.ru
-                 */
-                $(document).ready(function () {
-                    // Запуск api комет сервера
-                    CometServer().start({ dev_id: 3 }) // Идентификатор разработчика на comet-server.ru
-
-                    // Запуск чата. Передаём ему элемент в котором надо создать окно чата.
-                    htmljs_Chat_Init($("#html-chat"))
-                });
-            </script>
             <p>&copy; @DateTime.Now.Year - Formula 1</p>
         </footer>
     </div>

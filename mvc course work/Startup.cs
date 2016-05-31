@@ -9,6 +9,7 @@ namespace mvc_course_work
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+            app.MapSignalR();
         }
     }
 }

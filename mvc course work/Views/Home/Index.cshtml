@@ -15,7 +15,7 @@
                 newYear = true;
 
             if ((new Date()) > ts) {
-                ts = new Date('@Model.Races[2].getDate()');
+                ts = new Date('@Model.Races[3].getDate()');
                 newYear = false;
             }
 
@@ -54,8 +54,8 @@
 
 <body style="margin:8px;">
     <h1 style="text-align:center"> Next Race</h1>
-    <h1 style="text-align:center">@Model.Races[2].Name</h1>
-    <h1 style="text-align:center">@Model.Races[2].day:@Model.Races[2].month:@Model.Races[2].year</h1>
+    <h1 style="text-align:center">@Model.Races[3].Name</h1>
+    <h1 style="text-align:center">@Model.Races[3].day:@Model.Races[3].month:@Model.Races[3].year</h1>
     <div id="countdown">
 
     </div>

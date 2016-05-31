@@ -1,2 +1,27 @@
 ﻿body {
 }
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    height:100%;
+}
+
+.container nav {
+    margin-top:15px;
+    height:555px;
+    overflow:hidden; 
+    overflow-y:scroll;
+}
+
+.container nav ul {
+    width:100%; 
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+.container nav ul li {
+    width:99%;
+    border-bottom: 1px solid rgba(190, 6, 6, 0.66);
+}
