@@ -4,39 +4,70 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <link rel="Stylesheet" href="~/Content/teamIndex.css" />
-    <link rel="Stylesheet" href="~/Content/driver.css" />
     <title></title>
 </head>
 <body>
     <h1>@Model.Name</h1>
+
     <div class="content">
-<h2>Team Info</h2>
-        <table class="team-info-table">
-            <tr>
-                <td>Podium Finishes: </td>
-                <td>@Model.PodiumFinishes</td>
-            </tr>
-            <tr>
-                <td>Champinionship Titles: </td>
-                <td>@Model.ChampinionshipTitles</td>
-            </tr>
-        </table>
+        
+        <div class="info">
+            <h2>Team Info</h2>
+            <table class=" team-info-table">
+                <tr>
+                    <td>Podium Finishes: </td>
+                    <td>@Model.PodiumFinishes</td>
+                </tr>
+                <tr>
+                    <td>Champinionship Titles: </td>
+                    <td>@Model.ChampinionshipTitles</td>
+                </tr>
+                <tr>
+                    <td>Base: </td>
+                    <td>@Model.Base</td>
+                </tr>
+                <tr>
+                    <td>Team Chief: </td>
+                    <td>@Model.TeamChief</td>
+                </tr>
+                <tr>
+                    <td>Technical Chief: </td>
+                    <td>@Model.TechnicalChief</td>
+                </tr>
+                <tr>
+                    <td>Chassis: </td>
+                    <td>@Model.Chasis</td>
+                </tr>
+                <tr>
+                    <td>Power Unit: </td>
+                    <td>@Model.PowerUnit</td>
+                </tr>
+                <tr>
+                    <td>First Team Entry: </td>
+                    <td>@Model.firstTeamEntry</td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="drivers">
+            <ul>
+                @for (int i = 0; i < 2; i++)
+                {
+                    var b = @Model.Drivers.ElementAt(i);
+                    <li class="blck">
+                        <div class="text">
+                            <a href="@Url.Action("Index", "Driver", new {b.Id})">
+                                <div class="image"><img src="@b.picture" /></div>@b.name @b.familyName
+                            </a>
+                            <p>@b.Team.Name</p>
+                            <p class="id">@b.number</p>
+                        </div>
+                    </li>
+                }
+            </ul>
+        </div>
     </div>
 
-<div class="drivers">
-        <ul>
-            @foreach (var b in Model.Drivers)
-            {
-                <li class="blck">
-                    <div class="text">
-                        <a href="@Url.Action("Index", "Driver", new {b.Id})">
-                        <div class="image"><img src="@b.picture" /></div>@b.name @b.familyName</a>
-                        <p>@b.Team.Name</p>
-                        <p class="id">@b.number</p>
-                    </div>
-                </li>
-            }
-        </ul>
-    </div>
+
 </body>
 </html>

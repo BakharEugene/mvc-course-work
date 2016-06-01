@@ -55,6 +55,7 @@
     clear: both;
     text-align: center;
     width: 100%;
+    border:solid;
 }
 
     .drivers ul {
